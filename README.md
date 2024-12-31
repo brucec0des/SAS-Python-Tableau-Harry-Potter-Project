@@ -1,6 +1,6 @@
 # Harry Potter Tableau End-to-End Project
 
-![](https://github.com/brucec0des/SQL-Python-Walmart-Project/blob/main/ASSETS/purepng.com-walmart-logologobrand-logoiconslogos-2515199386533ogay.png)
+![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/harry-potter.png)
 
 ## Project Overview
 
