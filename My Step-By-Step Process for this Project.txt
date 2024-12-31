@@ -1,0 +1,97 @@
+1. Created Virtual Environment in VS Code by opening Terminal and using: python -m venv myenv_2
+
+2. Created new file in Explorer pane called "project1.ipynb"
+
+3. Added code block and tested setup by running: print("Hello, World!)
+
+4. Selected myenv_2 as my virtual environment
+
+5. Installed whatever it asked in the pop up
+
+6. Install dependencies (1 at a time) in Terminal using: pip install pandas numpy sqlalchemy psycopg random Faker datetime timedelta
+*All install successfully but "random" gave me an error
+**After some research, it's because "random" is already part of the native Python package so installing it is not necessary - just import it
+
+7. Add new code block and pasted 'fixed-python-script-for-ministry...' code into it and ran
+*The code executed successfully and the .CSV file appeared in my repository
+
+8. Loaded dataset using: df = pd.read_csv('ministry_of_magic_hr_dataset.csv', encoding_errors="ignore")
+
+df.shape #will tell me how many rows and headers
+
+df.head() #will show me the actual table
+
+df.describe() #will give you the count, min, max of numberical column data
+
+df.info() #will tell you each columns data types and number of nulls
+
+df.duplicated().sum() #will return # of duplicates (without '.sum()' modifier we will just get a boolean.
+*result will be: np.int64(NUMBER) where 'NUMBER' will be # of duplicates.  If '0' there are none.
+
+df.isnull().sum() #will return number of rows that contain NULL
+
+df.columns #shows all columns preset in dataset
+
+9. Export data to PostgreSQL by updating "import pandas" codeblock to say:
+import pandas as pd
+from sqlalchemy import create_engine 
+import psycopg 
+
+10. Enter login credentials for PostgreSQL in new codeblock:
+#psql
+#host = localhost
+#port = 5432
+#user = postgres
+#password = 'nANNERPUSS7'
+
+11. Connec to PostgreSQL using:
+#psql connection
+engine_psql = create_engine("postgresql+psycopg://postgres:nANNERPUSS7@localhost:5432/walmart_db")
+
+try:
+    engine_psql
+    print("Connection Successful to PostgreSQL")
+except:
+    print("Unable to connect")
+    
+    
+12. Exports data to PostgreSQL
+
+#exports the data and automatically creates a table for it
+df.to_sql(name='ministry', con=engine_psql, if_exists='append', index=False)    
+
+***COMPLETE****
+
+YOU SHOULD NOW BE ABLE TO SOLVE BUSINESS PROBLEMS USING SQL COMMANDS IN POSTGRESQL
+
+!! I noticed in PostgreSQL that my Column names were Initial Caps instead of lowercase and contained spaces instead of underscores.  To makes things easy I asked Claude fix this for me.
+
+13. Run the following code to reformat the table:
+DO $$ 
+DECLARE 
+    col record;
+    new_name text;
+    current_table text := 'ministry'; -- Your table name
+BEGIN
+    FOR col IN 
+        SELECT column_name 
+        FROM information_schema.columns 
+        WHERE table_name = current_table
+    LOOP
+        -- Convert to lowercase and replace spaces with underscores
+        new_name := LOWER(REPLACE(col.column_name, ' ', '_'));
+        
+        -- Only rename if the name would actually change
+        IF col.column_name != new_name THEN
+            EXECUTE format('ALTER TABLE %I RENAME COLUMN %I TO %I',
+                current_table,
+                col.column_name,
+                new_name
+            );
+        END IF;
+    END LOOP;
+END $$;
+
+*THIS WORKED SUCCESSFULLY!
+
+
