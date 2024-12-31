@@ -1,6 +1,6 @@
 # Harry Potter Tableau End-to-End Project
 
-![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/Harry-Potter-2.png)
+![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/Harry-Potter-3.png)
 
 ## Project Overview
 
