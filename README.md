@@ -1,14 +1,14 @@
-# Harry Potter Tableau End-to-End Project
+# Harry Potter Tableau Dashboard End-to-End Project
 
 ![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/Harry-Potter-3.png)
 
 ## Project Overview
 
-This project is an end-to-end data analysis solution designed to extract critical business insights from Walmart sales data. I utilized Python for data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions. This project helped me to refine my skills in data manipulation, SQL querying, and data pipeline creation.
+This project is an end-to-end data analysis solution designed to extract critical business insights from the Ministry of Magic's HR database. I utilized Python for data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions. This project helped me to refine my skills in data manipulation, SQL querying, and data pipeline creation while utilizing AI when appropriate to increase efficiency.
 
 ---
 
-![Project Pipeline](https://github.com/brucec0des/SQL-Python-Walmart-Project/blob/main/ASSETS/walmart_project-piplelines.png)
+![Dashboard Preview](https://github.com/brucec0des/SQL-Python-Walmart-Project/blob/main/ASSETS/walmart_project-piplelines.png)
 
 ## Project Steps
 
