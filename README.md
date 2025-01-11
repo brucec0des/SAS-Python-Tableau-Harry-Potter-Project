@@ -139,7 +139,9 @@ The summary view should be divided into three main sections: Overview, Demograph
 
 ## Inspiration
 
-While watching Harry Potter and the Deathly Hallows: Part One, there's a scene where Harry, Ron, and Harmoine are caught in the woods by Ministry of Magic bounty hunters. Harry gives them a fake name which they reference against a list of all known wizards.  It got me thinking: what does this database look like? What sort of SAS queries would a data analyst for the Ministry of Magic make?
+While watching Harry Potter and the Deathly Hallows: Part One, there's a scene where Harry, Ron, and Harmoine are caught in the woods by Ministry of Magic bounty hunters. Harry gives them a fake name which they reference against a list of all known wizards.  It got me thinking: what does this database look like? What sort of SAS queries would a data analyst for the Ministry of Magic make? After doing some research, I realized how easily I could leverage AI and Python's Faker library to answer these questions with a custom dataset based on the Harry Potter universe.
+
+![](https://github.com/brucec0des/SAS-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/momai.jpg)
 
 ---
 
