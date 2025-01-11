@@ -8,7 +8,7 @@ This project is an end-to-end data analysis solution designed to extract critica
 
 ![Dashboard Preview](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/HR%20%20Summary.png)
 
-## Live Dashboard Demo: [Click here!](https://public.tableau.com/app/profile/bruce.harper8067/viz/MinistryofMagicHRDashboard/HRSummary) to explore the interactive demo!
+## Live Dashboard Demo: [Click here to explore the interactive demo!](https://public.tableau.com/app/profile/bruce.harper8067/viz/MinistryofMagicHRDashboard/HRSummary)
 
 ---
 
