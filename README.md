@@ -89,11 +89,11 @@ This project is an end-to-end data analysis solution designed to extract critica
    -**Overview** 
    The Overview section should provide a snapshot of the overall HR metrics, including:
 
-      - Display the total number of hired employees, active employees, and terminated employees.
-      - Visualize the total number of hired and terminated employees over the years.
-      - Present a breakdown of total employees by department and job titles.
-      - Compare total employees between headquarters (HQ) and branches (New York is the HQ)
-      - Show the distribution of employees by city and state.
+   - Display the total number of hired employees, active employees, and terminated employees.
+   - Visualize the total number of hired and terminated employees over the years.
+   - Present a breakdown of total employees by department and job titles.
+   - Compare total employees between headquarters (HQ) and branches (New York is the HQ)
+   - Show the distribution of employees by city and state.
    
    -**Demographics**
    The Demographics section should offer insights into the composition of the workforce, including:
