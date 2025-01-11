@@ -1,10 +1,10 @@
-# Harry Potter Tableau Dashboard End-to-End Project
+# Ministry of Magic HR Tableau Dashboard End-to-End Project
 
 ![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/Harry-Potter-3.png)
 
 ## Project Overview
 
-This project is an end-to-end data analysis solution designed to extract critical business insights from the Ministry of Magic's HR database. I utilized Python for data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions. This project helped me to refine my skills in data manipulation, SQL querying, and data pipeline creation while utilizing AI when appropriate to increase efficiency.
+This project is an end-to-end data analysis solution designed to extract critical business insights from the Ministry of Magic's HR database. I utilized Python & AI for dataset creation, data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions, and Tableau to data visualization. This project helped me to refine my skills in data manipulation, SQL querying, and data pipeline creation while utilizing AI when appropriate to increase efficiency.
 
 ---
 
@@ -123,21 +123,8 @@ Possible extensions to this project:
 
 ---
 
-## License
-
-This project is licensed under the MIT License. 
-
----
-
-## Acknowledgments
-
-- **Data Source**: Kaggle’s Walmart Sales Dataset
-- **Inspiration**: Walmart’s business case studies on sales and supply chain optimization.
-
----
-
 ## Author - Bruce Harper
 
-This project is part of my portfolio, showcasing the SQL & Python skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
+This project is part of my portfolio, showcasing the Tableau, SQL & Python skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
 ---
