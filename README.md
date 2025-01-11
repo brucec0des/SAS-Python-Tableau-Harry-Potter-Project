@@ -6,9 +6,9 @@
 
 This project is an end-to-end data analysis solution designed to extract critical business insights from the Ministry of Magic's HR database. I utilized Python & AI for dataset creation, data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions, and Tableau to data visualization. This project helped me to refine my skills in data manipulation, SQL querying, and data pipeline creation while utilizing AI when appropriate to increase efficiency.
 
-⭐![Dashboard Preview](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/HR%20%20Summary.png)
+![Dashboard Preview](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/HR%20%20Summary.png)
 
-## Live Dashboard Demo: [Click here to explore the interactive demo!](https://public.tableau.com/app/profile/bruce.harper8067/viz/MinistryofMagicHRDashboard/HRSummary)
+## ⭐Live Dashboard Demo: [Click here to explore the interactive demo!](https://public.tableau.com/app/profile/bruce.harper8067/viz/MinistryofMagicHRDashboard/HRSummary)
 
 ---
 
