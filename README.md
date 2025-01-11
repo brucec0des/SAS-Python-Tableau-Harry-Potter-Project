@@ -95,31 +95,24 @@ The summary view should be divided into three main sections: Overview, Demograph
    - Show the distribution of employees by city and state.
 
 **Demographics**
-The Demographics section should offer insights into the composition of the workforce, including:
+- The Demographics section should offer insights into the composition of the workforce, including:
 
-- Present the gender ratio in the company.
-- Visualize the distribution of employees across age groups and education levels.
-- Show the total number of employees within each age group.
-- Show the total number of employees within each education level.
-- Present the correlation between employees’s educational backgrounds and their performance ratings.
+   - Present the gender ratio in the company.
+   - Visualize the distribution of employees across age groups and education levels.
+   - Show the total number of employees within each age group.
+   - Show the total number of employees within each education level.
+   - Present the correlation between employees’s educational backgrounds and their performance ratings.
 
 **Income**
-The income analysis section should focus on salary-related metrics, including:
+- The income analysis section should focus on salary-related metrics, including:
 
-- Compare salaries across different education levels for both genders to identify any discrepancies or patterns.
-- Present how the age correlate with the salary for employees in each department.
+   - Compare salaries across different education levels for both genders to identify any discrepancies or patterns.
+   - Present how the age correlate with the salary for employees in each department.
 
 **Employee Records View**
 
 - Provide a comprehensive list of all employees with necessary information such as name, department, position, gender, age, education, and salary.
 - Users should be able to filter the list based on any of the available columns.
-
-## Future Enhancements
-
-Possible extensions to this project:
-- Integration with a dashboard tool (e.g., Power BI or Tableau) for interactive visualization.
-- Additional data sources to enhance analysis depth.
-- Automation of the data pipeline for real-time data ingestion and analysis.
 
 ### 9. Project Publishing and Documentation
 - **Documentation**: Maintain well-structured documentation of the entire process in Markdown or a Jupyter Notebook.
