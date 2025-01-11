@@ -74,6 +74,7 @@ run;
 ### 7. SAS Analysis: Complex Queries and Business Problem Solving
    - **Business Problem-Solving**: Write and execute SAS queries to answer critical business questions.
    - **Documentation**: Keep clear notes of each query's objective, approach, and results.
+[Click here to see my SAS queries](https://github.com/brucec0des/SAS-Python-Tableau-Harry-Potter-Project/blob/main/Ministry%20of%20Magic%20Case%20Study.sas)
 
 ### 8. Create the Dashboard
 
@@ -133,6 +134,12 @@ The summary view should be divided into three main sections: Overview, Demograph
   - `pandas`, `numpy`, `sqlalchemy`, `psycopg`
 - **ChatGPT** (for dataset creation)
 - **Tableau Public** (for data visualization)
+
+---
+
+## Inspiration
+
+While watching Harry Potter and the Deathly Hallows: Part One, there's a scene where Harry, Ron, and Harmoine are caught in the woods by Ministry of Magic bounty hunters. Harry gives them a fake name which they reference against a list of all known wizards.  It got me thinking: what does this database look like? What sort of SAS queries would a data analyst for the Ministry of Magic make?
 
 ---
 
