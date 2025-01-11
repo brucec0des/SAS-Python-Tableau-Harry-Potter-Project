@@ -1,6 +1,6 @@
 # Ministry of Magic Tableau HR Dashboard End-to-End Project
 
-![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/mom4.jpg)
+![](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/mom4.png)
 
 ## Project Overview
 
