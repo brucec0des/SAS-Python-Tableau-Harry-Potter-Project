@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project is an end-to-end data analysis solution designed to extract critical business insights from the Ministry of Magic's HR database. I utilized Python & AI for dataset creation, data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions, and Tableau to data visualization. This project helped me to refine my skills in data manipulation, SQL querying, and data pipeline creation while utilizing AI when appropriate to increase efficiency.
+This project is an end-to-end data analysis solution designed to extract critical business insights from the Ministry of Magic's HR database. I utilized Python & AI for dataset creation, data processing and analysis, SAS for advanced querying, and structured problem-solving techniques to solve key business questions, and Tableau to data visualization. This project helped me to refine my skills in data manipulation, SAS querying, and data pipeline creation while utilizing AI when appropriate to increase efficiency.
 
 ![Dashboard Preview](https://github.com/brucec0des/SQL-Python-Tableau-Harry-Potter-Project/blob/main/ASSETS/HR%20%20Summary.png)
 
@@ -15,106 +15,102 @@ This project is an end-to-end data analysis solution designed to extract critica
 ## Project Steps
 
 ### 1. Set Up the Environment
-   - **Tools Used**: Visual Studio Code (VS Code), Python, SQL (PostgreSQL)
-   - **Goal**: Create a structured workspace within VS Code and organize project folders for smooth development and data handling.
+   - **Tools Used**: ChatGPT, Python, SAS Studio, Tableau
+   - **Goal**: Use AI and Python to generate a robust dataset to query in SAS Studio and visualize using Tableau.
 
-### 2. Set Up Kaggle API
-   - **API Setup**: Obtain your Kaggle API token from [Kaggle](https://www.kaggle.com/) by navigating to your profile settings and downloading the JSON file.
-   - **Configure Kaggle**: 
-      - Place the downloaded `kaggle.json` file in your local `.kaggle` folder.
-      - Use the command `kaggle datasets download -d <dataset-path>` to pull datasets directly into your project.
+### 2. Generate the Python script
+   - **ChatGPT Prompt**: Submit the following prompt to ChatGPT:
+      ```
+Generate python script to generate a realistic Harry Potter themed dataset of 8950 records for the Ministry of Magic's human resources department. The dataset should include the following attributes:
+Employee ID: A unique identifier.
+First Name: Randomly generated using common European first names.
+Last Name: Randomly generated using any of the first 200 surnames you can find from the Harry Potter universe.
+Gender: Randomly chosen with a 46% probability for ‘Female’ and a 54% probability for ‘Male’.
+Country and City: Randomly assigned from a predefined list of European countries and their cities.
+Hire Date: Randomly generated with custom probabilities for each year from 2015 to 2024.
+Department: Randomly chosen from a list of departments with specified probabilities.
+Job Title: Randomly selected based on the department, with specific probabilities for each job title within the department.
+Education Level: Determined based on the job title, chosen from a predefined mapping of job titles to education levels.
+Performance Rating: Randomly selected from ‘Excellent’, ‘Good’, ‘Satisfactory’, ‘Needs Improvement’ with specified probabilities.
+Overtime: Randomly chosen with a 30% probability for ‘Yes’ and a 70% probability for ‘No’.
+Salary: Generated based on the department and job title, within specific ranges.
+Birth Date: Generated based on age group distribution and job title requirements, ensuring consistency with the hire date.
+Termination Date: Assigned to a subset of employees (11.2% of the total) with specific probabilities for each year from 2015 to 2024, ensuring the termination date is at least 6 months after the hire date.
+Adjusted Salary: Calculated based on gender, education level, and age, applying specific multipliers and increments.
+Be sure to structure the code cleanly, using functions where appropriate, and include comments to explain each step of the process.
+      ```
 
-### 3. Download Walmart Sales Data
-   - **Data Source**: Use the Kaggle API to download the Walmart sales datasets from Kaggle.
-   - **Dataset Link**: [Walmart Sales Dataset](https://www.kaggle.com/najir0123/walmart-10k-sales-datasets)
-   - **Storage**: Save the data in the `data/` folder for easy reference and access.
-
-### 4. Install Required Libraries and Load Data
-   - **Libraries**: Install necessary Python libraries using:
+### 3. Install Required Libraries and Load Data in VS Code
+   - **Libraries**: Open VS Code, create a new virtual environment and install necessary Python libraries using:
      ```bash
      pip install pandas numpy sqlalchemy psycopg
      ```
    - **Loading Data**: Read the data into a Pandas DataFrame for initial analysis and transformations.
 
-### 5. Explore the Data
+### 4. Explore the Data
    - **Goal**: Conduct an initial data exploration to understand data distribution, check column names, types, and identify potential issues.
    - **Analysis**: Use functions like `.info()`, `.describe()`, and `.head()` to get a quick overview of the data structure and statistics.
 
-### 6. Data Cleaning
+### 5. Data Cleaning
    - **Remove Duplicates**: Identify and remove duplicate entries to avoid skewed results.
    - **Handle Missing Values**: Drop rows or columns with missing values if they are insignificant; fill values where essential.
    - **Fix Data Types**: Ensure all columns have consistent data types (e.g., dates as `datetime`, prices as `float`).
    - **Currency Formatting**: Use `.replace()` to handle and format currency values for analysis.
    - **Validation**: Check for any remaining inconsistencies and verify the cleaned data.
 
-### 7. Feature Engineering
-   - **Create New Columns**: Calculate the `Total Amount` for each transaction by multiplying `unit_price` by `quantity` and adding this as a new column.
-   - **Enhance Dataset**: Adding this calculated field will streamline further SQL analysis and aggregation tasks.
+### 6. Load Data into SAS Studio
+   - **Upload CSV File to SAS Studio**: Create a new folder in SAS Studio and upload the CSV file there
+   - **Libary Creation**: Use the libname statement to create a new library to hold the dataset
+   - **Importing the Data**: Use proc import to convert the CSV file into a database for SAS querying
 
-### 8. Load Data into PostgreSQL
-   - **Set Up Connections**: Connect to PostgreSQL using `sqlalchemy` and load the cleaned data into each database.
-   - **Table Creation**: Set up tables in PostgreSQL using Python SQLAlchemy to automate table creation and data insertion.
-   - **Verification**: Run initial SQL queries to confirm that the data has been loaded accurately.
+   ```
+   LIBNAME ministry "/home/bruceharp20/ministry/"; 
 
-### 9. SQL Analysis: Complex Queries and Business Problem Solving
-   - **Business Problem-Solving**: Write and execute complex SQL queries to answer critical business questions, such as:
-     - Revenue trends across branches and categories.
-     - Identifying best-selling product categories.
-     - Sales performance by time, city, and payment method.
-     - Analyzing peak sales periods and customer buying patterns.
-     - Profit margin analysis by branch and category.
+   PROC IMPORT datafile="/home/bruceharp20/ministry/ministry_of_magic_hr_dataset.csv" out=MINISTRY.ministry dbms=csv;
+   run;
+
+   ```
+
+### 7. SAS Analysis: Complex Queries and Business Problem Solving
+   - **Business Problem-Solving**: Write and execute SAS queries to answer critical business questions.
    - **Documentation**: Keep clear notes of each query's objective, approach, and results.
 
-### 10. Project Publishing and Documentation
-   - **Documentation**: Maintain well-structured documentation of the entire process in Markdown or a Jupyter Notebook.
-   - **Project Publishing**: Publish the completed project on GitHub or any other version control platform, including:
-     - The `README.md` file (this document).
-     - Jupyter Notebooks (if applicable).
-     - SQL query scripts.
-     - Data files (if possible) or steps to access them.
+### 8. Create the Dashboard
 
----
+#### Guidelines for Creating the Dashboard
 
-## Requirements
+User Story - HR Dashboard
+As an HR manager, I want a comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis
 
-- **Python 3.8+**
-- **SQL Databases**: PostgreSQL
-- **Python Libraries**:
-  - `pandas`, `numpy`, `sqlalchemy`, `psycopg2`
-- **Kaggle API Key** (for data downloading)
+Summary View
 
-## Getting Started
+The summary view should be divided into three main sections: Overview, Demographics, and Income Analysis
 
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   ```
-2. Install Python libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up your Kaggle API, download the data, and follow the steps to load and analyze.
+Overview
+The Overview section should provide a snapshot of the overall HR metrics, including:
 
----
+Display the total number of hired employees, active employees, and terminated employees.
+Visualize the total number of hired and terminated employees over the years.
+Present a breakdown of total employees by department and job titles.
+Compare total employees between headquarters (HQ) and branches (New York is the HQ)
+Show the distribution of employees by city and state.
+Demographics
+The Demographics section should offer insights into the composition of the workforce, including:
 
-## Project Structure
+Present the gender ratio in the company.
+Visualize the distribution of employees across age groups and education levels.
+Show the total number of employees within each age group.
+Show the total number of employees within each education level.
+Present the correlation between employees’s educational backgrounds and their performance ratings.
+Income
+The income analysis section should focus on salary-related metrics, including:
 
-```plaintext
-|-- data/                     # Raw data and transformed data
-|-- sql_queries/              # SQL scripts for analysis and queries
-|-- notebooks/                # Jupyter notebooks for Python analysis
-|-- README.md                 # Project documentation
-|-- requirements.txt          # List of required Python libraries
-|-- main.py                   # Main script for loading, cleaning, and processing data
-```
----
+Compare salaries across different education levels for both genders to identify any discrepancies or patterns.
+Present how the age correlate with the salary for employees in each department.
+Employee Records View
 
-## Results and Insights
-
-This section will include your analysis findings:
-- **Sales Insights**: Key categories, branches with highest sales, and preferred payment methods.
-- **Profitability**: Insights into the most profitable product categories and locations.
-- **Customer Behavior**: Trends in ratings, payment preferences, and peak shopping hours.
+Provide a comprehensive list of all employees with necessary information such as name, department, position, gender, age, education, and salary.
+Users should be able to filter the list based on any of the available columns.
 
 ## Future Enhancements
 
@@ -122,6 +118,26 @@ Possible extensions to this project:
 - Integration with a dashboard tool (e.g., Power BI or Tableau) for interactive visualization.
 - Additional data sources to enhance analysis depth.
 - Automation of the data pipeline for real-time data ingestion and analysis.
+
+### 9. Project Publishing and Documentation
+   - **Documentation**: Maintain well-structured documentation of the entire process in Markdown or a Jupyter Notebook.
+   - **Project Publishing**: Publish the completed project on GitHub or any other version control platform, including:
+     - The `README.md` file (this document).
+     - Jupyter Notebooks (if applicable).
+     - SAS query scripts.
+     - Data files (if possible) or steps to access them.
+     - Tableau workspace
+
+---
+
+## Requirements
+
+- **Python 3.8+**
+- **SAS Databases**: SAS Studio
+- **Python Libraries**:
+  - `pandas`, `numpy`, `sqlalchemy`, `psycopg`
+- **ChatGPT** (for dataset creation)
+- **Tableau Public** (for data visualization)
 
 ---
 
