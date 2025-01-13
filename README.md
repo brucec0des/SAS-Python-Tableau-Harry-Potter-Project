@@ -74,8 +74,6 @@ run;
 ### 7. SAS Analysis: Complex Queries and Business Problem Solving
    - **Business Problem-Solving**: Write and execute SAS queries to answer critical business questions.
    - **Documentation**: Keep clear notes of each query's objective, approach, and results.
-[Click here to see my SAS queries](https://github.com/brucec0des/SAS-Python-Tableau-Harry-Potter-Project/blob/main/Ministry%20of%20Magic%20Case%20Study.sas)
-
 --- 
 
 ## Business Problems and Solutions
