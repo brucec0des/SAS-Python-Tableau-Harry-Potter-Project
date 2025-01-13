@@ -92,11 +92,13 @@ run;
 
 ### 2. Filter the dataset to list all employees who have "Excellent" performance ratings
 
+```sql
 	PROC SQL;
 		SELECT *
 		FROM MINISTRY.MINISTRY
 		WHERE performance_rating = 'Excellent';
 	QUIT;
+```
 
 ### 3. Create a summary of the average adjusted salary grouped by gender
 
