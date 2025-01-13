@@ -170,8 +170,8 @@ run;
 ```
 
 ### 10. Create a flag column in the dataset indicating if an employee is eligible for a promotion based on the following criteria:
-		- Performance rating is "Excellent"
-		- Tenure is more than 3 years
+   - Performance rating is "Excellent"
+   - Tenure is more than 3 years
 
 ```sql
 	DATA promotion_flag;
